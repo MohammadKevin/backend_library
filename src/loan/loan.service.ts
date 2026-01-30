@@ -1,0 +1,67 @@
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { PrismaService } from 'src/prisma/prisma.service';
+import { CreateLoanDto } from './dto/create-loan.dto';
+import { UpdateLoanDto } from './dto/update-loan.dto';
+
+@Injectable()
+export class LoanService {
+  constructor(private prisma: PrismaService) {}
+
+  async create(dto: CreateLoanDto) {
+    return this.prisma.loan.create({
+      data: {
+        memberId: dto.memberId,
+        dueDate: new Date(dto.dueDate),
+      },
+    });
+  }
+
+  async findAll() {
+    return this.prisma.loan.findMany({
+      orderBy: { id: 'asc' },
+      include: {
+        member: true,
+        details: true,
+      },
+    });
+  }
+
+  async findOne(id: number) {
+    const loan = await this.prisma.loan.findUnique({
+      where: { id },
+      include: {
+        member: true,
+        details: true,
+      },
+    });
+
+    if (!loan) {
+      throw new NotFoundException('Loan not found');
+    }
+
+    return loan;
+  }
+
+  async update(id: number, dto: UpdateLoanDto) {
+    await this.findOne(id);
+
+    return this.prisma.loan.update({
+      where: { id },
+      data: {
+        ...dto,
+        dueDate: dto.dueDate ? new Date(dto.dueDate) : undefined,
+        returnDate: dto.returnDate ? new Date(dto.returnDate) : undefined,
+      },
+    });
+  }
+
+  async remove(id: number) {
+    await this.findOne(id);
+
+    await this.prisma.loan.delete({
+      where: { id },
+    });
+
+    return { message: `Loan with id ${id} deleted` };
+  }
+}
