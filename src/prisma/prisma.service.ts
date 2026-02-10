@@ -13,6 +13,6 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
   }
   async onModuleInit() {
     await this.$connect();
-    console.log('Database connected:', process.env.DATABASE_URL);
+    console.log('Database connected:', process.env.DATABASE_UR);
   }
 }
