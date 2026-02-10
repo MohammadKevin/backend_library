@@ -1,3 +1,0 @@
-DATABASE_URL="mysql://user:password@cloud-host:3306/backend-library" 
-JWT_SECRET="SECRET_KEY_PROD" 
-PORT=3000
