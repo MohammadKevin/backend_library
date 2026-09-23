@@ -12,19 +12,19 @@
 
 ---
 
-## 📌 Overview
+## Overview
 A robust NestJS backend API powering digital catalog searches, member borrowings, return deadline tracking, and overdue penalty calculations.
 
 ---
 
-## ✨ Key Features
+## Key Features
 - Book cataloging with ISBN, author, category, and available copies
 - Loan cycle management with automatic fine computation for overdue returns
 - Member borrowing limits and digital membership verification
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: NestJS
 - **Language**: TypeScript
 - **ORM**: Prisma ORM
@@ -32,7 +32,7 @@ A robust NestJS backend API powering digital catalog searches, member borrowings
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```text
 backend_library/
 ├── src/
@@ -44,7 +44,7 @@ backend_library/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have the required runtimes and tools installed on your machine:
@@ -61,7 +61,7 @@ npm run start:dev
 
 ---
 
-## 👤 Author
+## Author
 **Mohammad Kevin Arif Rudianto**
 - **GitHub:** [@MohammadKevin](https://github.com/MohammadKevin)
 - **Portfolio:** [portfolio-mohammadkevin.vercel.app](https://portfolio-mohammadkevin.vercel.app)
@@ -70,9 +70,9 @@ npm run start:dev
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 <div align="center">
-⭐️ If you found this repository useful, please consider giving it a star!
+If you found this repository useful, please consider giving it a star!
 </div>
