@@ -18,9 +18,9 @@ A robust NestJS backend API powering digital catalog searches, member borrowings
 ---
 
 ## ✨ Key Features
-- ⚡ **Book cataloging with ISBN, author, category, and available copies**: Book cataloging with ISBN, author, category, and available copies
-- ⚡ **Loan cycle management with automatic fine computation for overdue returns**: Loan cycle management with automatic fine computation for overdue returns
-- ⚡ **Member borrowing limits and digital membership verification**: Member borrowing limits and digital membership verification
+- Book cataloging with ISBN, author, category, and available copies
+- Loan cycle management with automatic fine computation for overdue returns
+- Member borrowing limits and digital membership verification
 
 ---
 
